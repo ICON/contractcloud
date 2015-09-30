@@ -62,9 +62,6 @@
   }
 }
 .single {
-  .jumbotron {
-    height: 500px;
-  }
   .form-submit input {
     background-color: $link-color;
     color: #fff;
@@ -112,5 +109,21 @@
       color: $brand-dark;
       margin-top: $margin-s;
     }
+  }
+  .single .post-inner-content {
+    padding: $margin-m;
+  }
+}
+@media (min-width:768px) and (max-width:992px) {
+  .blog .container {
+    width: 100%;
+    padding-left: $margin-m;
+    padding-right: $margin-m;
+  }
+}
+@media (max-width: 768px) {
+  .blog .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }

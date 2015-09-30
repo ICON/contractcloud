@@ -171,7 +171,7 @@ header .form-search {
   border-radius: 0 !important;
   > img {
     position: absolute;
-    top: -100%;
+    top: -50%;
     left: 0;
     width: 100%;
     height: auto;
@@ -427,7 +427,6 @@ blockquote {
       height: 100px;
     }
   }
-  .form-group 
 }
  // hide WP title, custom title is inserted with custom fields
  .page .entry-title {

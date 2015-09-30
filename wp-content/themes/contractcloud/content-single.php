@@ -30,6 +30,7 @@
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">
+      <p class="pull-right clearfix"><a href="" class="btn btn-default pull-right" onclick="history.back(-1)"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back</a></p>
 			<?php the_content(); ?>
       <a href="" class="btn btn-default pull-right" onclick="history.back(-1)"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back</a>
 			<?php
