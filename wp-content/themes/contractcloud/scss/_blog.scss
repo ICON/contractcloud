@@ -1,0 +1,116 @@
+.blog, .archive, .search {
+  .jumbotron {
+    height: 200px;
+    > img {
+      top: -50%;
+    }
+    .taglines {
+      width: 100%;
+      top: 50%;
+      left: 0;
+      margin-top: -30px;
+      h1 {
+        font-size: 50px;
+        color: #f1f1f1;
+        padding: 0;
+        text-transform: none;
+        text-align: center;
+      }
+    }
+    article {
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(170,170,170,0.5);
+      -moz-box-shadow: 2px 2px 5px 0px rgba(170,170,170,0.5);
+      box-shadow: 2px 2px 5px 0px rgba(170,170,170,0.5);
+    }
+  }
+  .page-title:not(&.show) {
+    display: none;
+  }
+  .entry-header {
+    padding: $margin-s 0 0 $margin;
+    margin-bottom: 0;
+    h1 {
+      margin-bottom: $margin-xs;
+    }
+  }
+  .entry-content {
+    padding: $margin;
+    margin-top: 0;
+  }
+  .entry-meta {
+    margin-bottom: 0;
+  }
+  .entry-title {
+    margin-top: $margin-s;
+    a {
+      color: $brand-dark;
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+  .blog-item-wrap > a {
+    display: block;
+    max-height: 500px;
+    overflow: hidden;
+    img {
+
+    }
+  }
+  .read-more {
+    float: right;
+  }
+}
+.single {
+  .jumbotron {
+    height: 500px;
+  }
+  .form-submit input {
+    background-color: $link-color;
+    color: #fff;
+    font-size: 14px !important;
+    &:hover {
+      background-color: $link-hover-color
+    }
+  }
+}
+.post-navigation a:hover, .paging-navigation a:hover {
+  background-color: $brand-primary;
+}
+.hentry {
+  h3 {
+    margin: 0 0 $margin-s;
+    color: $brand-primary;
+  }
+  .btn-default:not(.btn-block) {
+    color: $brand-dark;
+    border-color: $brand-dark;
+  }
+}
+.blog-secondary {
+  display: none;
+}
+@media (max-width:1200px) {
+  .blog .jumbotron {
+    height: 200px !important;
+    > img {
+      top: 0 !important;
+      height: 100%;
+    }
+  }
+}
+@media (max-width: 992px) {
+  .blog-sidebar {
+    display: none;
+  }
+  .blog-secondary {
+    display: block;
+    background-color: $gray-lightest;
+    padding: $margin-s;
+    .widgettitle {
+      display: block !important;
+      color: $brand-dark;
+      margin-top: $margin-s;
+    }
+  }
+}

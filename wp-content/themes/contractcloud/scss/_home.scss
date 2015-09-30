@@ -1,0 +1,292 @@
+//**Homepage**
+.home {
+  .jumbotron {
+    height: 500px;
+    margin-bottom: 0;
+    h2 {
+      display: block;
+      font-size: 40px;
+      margin: $margin-xs 0 0;
+      span {
+        padding-left: 96px;
+        background: url('../assets/images/header-slanty-lines.png') no-repeat center left;
+      }
+    }
+    img.single-featured {
+      top: 0;
+    }
+    .tagline-icon {
+      display: none;
+    }
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: $margin-m;
+  }
+  section > p:first-of-type {
+    margin-bottom: $margin;
+  }
+  article {
+    box-shadow: none;
+  }
+  .entry-title {
+    display: none;
+  }
+}
+
+.bullet {
+  margin-bottom: $margin-m;
+  padding-right: 0;
+  * {
+    color: #fff;
+    display: inline-block;
+  }
+  > span {
+    background: $brand-lighter;
+    width: 60px;
+    height: 60px;
+    margin-right: $margin-xs;
+    line-height: 60px;
+    vertical-align: top;
+    text-align: center;
+    @extend %circle;
+    i {
+      color: $brand-primary;   
+      vertical-align: middle;
+    }
+  }
+  > div {
+    width: 235px;
+    h3 {
+      font-size: 22px;
+      font-weight: 400;
+      color: $brand-lighter;
+      margin: 0;
+    }
+    p {
+      line-height: 1.4;
+      font-weight: 300;
+    }
+  }
+}
+#home-bullets {
+  position: relative;
+  min-height: 450px;
+  padding: $margin-m 0 0;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0.2, $brand-light),
+    color-stop(0.8, $brand-primary)
+  );
+  background-image: -o-linear-gradient(bottom, $brand-light 20%, $brand-primary 80%);
+  background-image: -moz-linear-gradient(bottom, $brand-light 20%, $brand-primary 80%);
+  background-image: -webkit-linear-gradient(bottom, $brand-light 20%, $brand-primary 80%);
+  background-image: -ms-linear-gradient(bottom, $brand-light 20%, $brand-primary 80%);
+  background-image: linear-gradient(to bottom, $brand-light 20%, $brand-primary 80%);
+  overflow: hidden;
+  * {
+    color: #fff;
+  }
+  h2 {
+    font-size: 33px;
+    font-weight: 300;
+    margin: 0 0 $margin-m 0;
+  }
+  .container {
+    position: relative;
+  }
+  .bullet span {
+    //background-color: #fff;
+    * {
+      color: $brand-primary;
+    }
+  }
+  .bullet-screenshot {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    width: 40%;
+  }
+}
+#home-markets {
+  .markets {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &.crowdfunding {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/crowdfunding-tile1.jpg');
+    }
+    &.human-resources {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/human-resources-tile1.jpg');
+    }
+    &.consumer-lending {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/consumer-lending-tile1.jpg');
+    }
+    &.mortgages {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/mortgages-tile1.jpg');
+    }
+    &.general-liability {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/general-liability-tile1.jpg');
+    }
+    &.investing-retail {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/investing-retail-tile1.jpg');
+    }
+    &.compliance-investing {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/compliance-investing-tile1.jpg');
+    }
+    &.medical {
+      background-image: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/medical-tile1.jpg');
+    }
+    span {
+      position: absolute;
+      bottom: 5px;
+      right: 5px;
+      padding: 10px;
+      text-align: right;
+      font-size: 30px;
+      font-weight: 100;
+      color: #fff;
+      line-height: 1;
+      font-weight: 300;
+    }
+    .market-overlay {
+      width: 100%;
+      height: 290px;
+      background:rgba(0,0,0,.9);
+      font-weight: 300;
+      text-align:center;
+      opacity: 0;
+      color: #fff;
+      padding: 20px;
+      line-height: 1.4;
+      -webkit-transition: opacity .25s ease;
+      -moz-transition: opacity .25s ease;
+      h3 {
+        color: $brand-light;
+      }
+    }
+    &:hover {
+      .market-overlay {
+        opacity: 1;
+      }
+      span {
+        display: none;
+      }
+    }
+  }
+  .row > div {
+    padding: 0 5px 10px 5px;
+    &:first-child {
+      padding-left: 15px;
+    }
+    &:last-child {
+      //padding-right: 15px;
+    }
+  }
+}
+#home-products {
+  p {
+    margin-bottom: $margin;
+  }
+  .tab-content {
+    margin: 0;
+    > div {
+      padding: {
+        top: $margin-m;
+        bottom: $margin-m;
+      }
+      &:first-child {
+        padding: {
+          left: $margin-m;
+          right: $margin-s;
+        }
+      }
+      &:last-child {
+        padding: {
+          left: $margin-s;
+          right: $margin-m;
+        }
+      }
+    }
+  }
+  h2 {
+    color: $brand-dark;
+    margin-top: 0;
+  }
+}
+#recent-posts-widget-with-thumbnails-2, #recent-posts-widget-with-thumbnails-3 {
+  .widgettitle {
+    font-size: 36px;
+    text-transform: none;
+    color: $brand-dark;
+  }
+  > ul {
+    border: $border;
+    li {
+      border: 0;
+      margin: 0;
+      padding: 25px;
+      max-height: 200px;
+      overflow: hidden;
+      &:nth-child(even) {
+        background-color: $gray-lightest;
+      }
+    }
+    img {
+      margin: 0 25px 25px 0;
+    }
+  }
+  span.rpwwt-post-title {
+    font-size: 28px;
+    color: $link-color;
+    display: block;
+    line-height: 1.2;
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+  .rpwwt-post-excerpt {
+    margin-top: $margin-xs;
+    font-weight: normal;
+  }
+}
+@media (max-width: 1200px) {
+  .rpwwt-post-title {
+    font-size: 24px !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  #home-bullets .container {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .bullet-screenshot {
+    display: none;
+  }
+}
+@media (max-width:768px) {
+  #home-bullets {
+    h2 {
+      text-align: center;
+    }
+    .bullet {
+      text-align: center;
+      div {
+        width: 90%;
+        margin-top: $margin-s;
+      }
+    }
+  }
+  .home .post-inner-content {
+    padding: 0;
+  }
+}

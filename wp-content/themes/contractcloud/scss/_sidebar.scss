@@ -1,0 +1,93 @@
+.category-sidebar {
+  min-height: 1200px;
+  height: 100%;
+  background-color: $brand-dark;
+  padding-top: $margin-s;
+  .widget {
+    margin-top: $margin-s;
+    ul.sidebar-nav {
+      font-size: 16px;
+      li {
+        font-weight: 300;
+        border-bottom: 0;
+        padding-bottom: $margin-s;
+        margin-bottom: 0;
+      }
+      a {
+        color: #fff;
+        &:hover {
+          color: $brand-lighter;
+        }
+      }
+    }
+  }
+  .widgettitle {
+    color: $brand-lighter;
+    font-size: 18px;
+    text-transform: none;
+    margin-bottom: $margin-s;
+  }
+  .btn-group, .btn {
+    width: 100%;
+  }
+}
+
+#secondary.blog-sidebar {
+  background-color: $gray-lightest;
+  padding: $margin-s;
+  .widget {
+    margin-bottom: $margin-m;
+    ul li {
+      border: none;
+    }
+    a {
+      color: $gray;
+      &:hover {
+        color: $brand-primary;
+        text-decoration: underline;
+      }
+    }
+    h3 {
+      margin-bottom: $margin-s;
+    }
+    .widget-title {
+      font-size: 18px;
+      font-weight: 400 !important;
+      color: $brand-dark;
+      text-transform: none;
+    }
+  }
+}
+.footer-widget-area {
+  margin-bottom: $margin-s;
+}
+#newsletter {
+  background: url('http://localhost/~ICON/contract-cloud/wp-content/uploads/2015/09/newsletter-background.png') no-repeat 0 0;
+  background-size: cover;
+  height: 200px;
+
+  label {
+    color: #fff;
+  }
+  input[type="text"], input[type="email"] {
+    padding-left: 10px;
+  }
+}
+@media (min-width:768px) and (max-width:1200px) {
+  #newsletter .col-sm-1 {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 1200px) {
+  #newsletter {
+    padding-bottom: $margin-m;
+    height: auto;
+    h2 {
+      font-size: 30px;
+      margin-bottom: 10px !important;
+    }
+    input[type="text"], input[type="email"] {
+      width: 100% !important;
+    }
+  }
+}
