@@ -1,6 +1,6 @@
 <div class="ebs-prodemo-outer">
     <div class="ebspro-titlebar">
-        <h1>osCitas Plugin Offeres</h1>
+        <h1>osCitas Plugin <?php echo __('Offeres', 'easy-bootstrap-shoercodes'); ?></h1>
         <div class="osc-logo">
             <img src="<?php echo EBS_PLUGIN_URL.'images/osc-logo.png';?>"  alt="" />
         </div>

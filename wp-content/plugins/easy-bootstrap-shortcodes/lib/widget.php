@@ -63,12 +63,12 @@ class Ebs_Custom_Widget extends WP_Widget {
         ?>
 
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>">Title:</label>
+            <label for="<?php echo $this->get_field_id('title'); ?>"><?php echo __('Title', 'easy-bootstrap-shoercodes'); ?>:</label>
             <input class="osc_ebs_input" style=" width: 100%; display: block;" id="<?php echo $this->get_field_id('title'); ?>" type="text" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" />
         </p>
 
         <p>
-            <label for="<?php echo $this->get_field_id('ebs_content'); ?>">Shortcode:</label>
+            <label for="<?php echo $this->get_field_id('ebs_content'); ?>"><?php echo __('Shortcode', 'easy-bootstrap-shoercodes'); ?>:</label>
             <textarea class="osc_ebs_input" style=" height: 250px;
     width: 100%; display: block;" id="<?php echo $this->get_field_id('ebs_content'); ?>" name="<?php echo $this->get_field_name('ebs_content'); ?>" ><?php echo $instance['ebs_content']; ?></textarea>
         </p>

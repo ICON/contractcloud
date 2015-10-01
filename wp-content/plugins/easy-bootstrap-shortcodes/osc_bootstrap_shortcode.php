@@ -4,10 +4,12 @@
   Plugin Name: Easy Bootstrap Shortcode
   Plugin URI: http://www.oscitasthemes.com
   Description: Add bootstrap 3.0.3 styles to your theme by wordpress editor shortcode buttons.
-  Version: 4.4.6
+  Version: 4.5.0
   Author: oscitas
   Author URI: http://www.oscitasthemes.com
   License: Under the GPL v2 or later
+  Text Domain: easy-bootstrap-shortcodes
+  Domain Path: /languages
  */
 
 /*
@@ -29,7 +31,7 @@ if(isset($checkplugin) && $checkplugin=='ebsp'):
         else {
             echo '<div id="message" class="update-nag ebs_notification">';
         }
-        echo '<p><strong>' . $message . '</strong></p></div>';
+        echo '<p><strong>' . __($message, 'easy-bbotstrap-shoercodes') . '</strong></p></div>';
     }
 
     /*
@@ -37,7 +39,7 @@ if(isset($checkplugin) && $checkplugin=='ebsp'):
      */
     function ebs_showAdminMessages()
     {
-        ebs_showMessage("Easy Bootstrap Shortcode Pro activated, deactivate Easy Bootstrap Shortcode free version", false);
+        ebs_showMessage(__("Easy Bootstrap Shortcode Pro activated, deactivate Easy Bootstrap Shortcode free version", 'easy-bootstrap-shoercodes'), false);
     }
 else:
     /*
@@ -59,7 +61,7 @@ else:
     {
         $ebsprefix='ebsp';
         $plugin_name='easy-bootstrap-shortcode-pro/osc_bootstrap_shortcode.php ';
-        echo '</tr><tr class="plugin-update-tr"><td colspan="3" class="plugin-update"><div class="update-message">'  . __('Easy Bootstrap Shortcode Pro also available, <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/">click here</a> to purchase one now',$ebsprefix) . '</div></td>';
+        echo '</tr><tr class="plugin-update-tr"><td colspan="3" class="plugin-update"><div class="update-message">'  . __('Easy Bootstrap Shortcode Pro also available, <a href="http://oscitasthemes.com/products/easy-bootstrap-shortcodes-pro/">click here</a> to purchase one now', 'easy-bootstrap-shoercodes') . '</div></td>';
     }
 
     add_action('admin_enqueue_scripts', 'osc_add_admin_ebs_scripts');
@@ -131,7 +133,7 @@ else:
     function osc_ebs_settings_link( $links ) {
         $isSet=apply_filters('ebs_custom_option',false);
         if (!$isSet) {
-            $settings_link = '<a href="admin.php?page=ebs/ebs-settings.php">Settings</a>';
+            $settings_link = '<a href="admin.php?page=ebs/ebs-settings.php">'.__('Settings', 'easy-bootstrap-shoercodes').'</a>';
             array_push( $links, $settings_link );
         }
         return $links;
@@ -145,9 +147,9 @@ else:
     function osc_ebs_add_admin_menu() {
         $isSet=apply_filters('ebs_custom_option',false);
         if (!$isSet) {
-            add_menu_page('EBS Settings', ' EBS Settings', 'manage_options', 'ebs/ebs-settings.php', 'osc_ebs_setting_page', plugins_url('/images/icon.png', __FILE__));
+            add_menu_page(__('EBS Settings', 'easy-bootstrap-shoercodes'), __('EBS Settings', 'easy-bootstrap-shoercodes'), 'manage_options', 'ebs/ebs-settings.php', 'osc_ebs_setting_page', plugins_url('/images/icon.png', __FILE__));
 
-            $sub_page= add_submenu_page( 'ebs/ebs-settings.php','osCitas Offers', 'osCitas Offers', 'manage_options', 'ebs-pro-demo', 'osc_ebs_pro_demo_page' );
+            $sub_page= add_submenu_page( 'ebs/ebs-settings.php',__('osCitas Offers', 'easy-bootstrap-shoercodes'), __('osCitas Offers', 'easy-bootstrap-shoercodes'), 'manage_options', 'ebs-pro-demo', 'osc_ebs_pro_demo_page' );
             add_action('admin_print_styles-' . $sub_page, 'ebsProDemoPage_register_admin_styles');
         }
     }
