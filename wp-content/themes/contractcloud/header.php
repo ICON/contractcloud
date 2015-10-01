@@ -18,9 +18,12 @@
 	<!--[if gt IE 9]><!-->
 <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
+<title>Contract Cloud | Your Video Witness for e-signatures and document acknowledgement</title>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Contract Cloud is your video witness to protect your contracts and e Signatures from lawsuits. Legally bind any eSign business document with video on any device.">
+<meta nmae="keywords" content="contract cloud, esign, e-signature, video witness, Digital, Documents, Video, Contract, Any Device, Quick Demo, Legal, Business, Online">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
